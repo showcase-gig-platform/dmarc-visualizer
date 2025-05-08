@@ -10,7 +10,7 @@ function main() {
   var today = new Date();
   today.setUTCHours(0, 0, 0, 0); // 今日の0時
   var startDate = new Date(today);
-  startDate.setDate(startDate.getDate() - 7);
+  startDate.setDate(startDate.getDate() - 7); // 適時修正
   var query = `${queryLabel} after:${Utilities.formatDate(startDate, "JST", "yyyy/MM/dd")} before:${Utilities.formatDate(today, "JST", "yyyy/MM/dd")}`;
   Logger.log(query);
   
